@@ -3,8 +3,8 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "renderer.h"
-#include "microui.h"
+#include <renderer.h>
+#include <microui.h>
 
 /* simple background colour */
 static float bg[3] = { 20, 20, 25 };
@@ -25,7 +25,7 @@ static void process_frame(mu_Context* ctx) {
     if (mu_begin_window(ctx, "Hex Editor", mu_rect(40, 40, 600, 500))) {
 
         /* This draws all the hex rows */
-        hex_draw(ctx);
+        // hex_draw(ctx);
 
         mu_end_window(ctx);
     }
@@ -72,7 +72,7 @@ int main(int argc, char** argv) {
     ctx->text_width = text_width;
     ctx->text_height = text_height;
 
-    hex_load_file("C:\\Program Files (x86)\\EA Games\\LOTR The Return of the King tm\\ROTK.exe");   /* or whatever file you want */
+    // hex_load_file("C:\\Program Files (x86)\\EA Games\\LOTR The Return of the King tm\\ROTK.exe");   /* or whatever file you want */
 
 
     /* main loop */

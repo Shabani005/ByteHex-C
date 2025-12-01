@@ -13,7 +13,8 @@ int main(int argc, char **argv){
   }
 
   printf("%s\n", nb_hexdump(argv[1]));
-  
+  printf("%zu\n", nb_default_info_h.count);
+
   return 0;
 }
 

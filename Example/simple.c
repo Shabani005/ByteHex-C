@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
 
   // PROGRAM STATES
   bool showFiles = false;
-  
+  bool showHex = false;
   // --------------------------------------
   InitWindow(1280, 720, "ByteHex");
   SetTargetFPS(60);
@@ -51,8 +51,15 @@ int main(int argc, char** argv) {
         mu_label(ctx, filelist.paths[filelist.count]);
       }
 
+      if (mu_button(ctx, "Load Hex")){
+        showHex = !showHex;
+      }
+      
       if (mu_button(ctx, "Choose File")){
         showFiles = !showFiles;
+      }
+
+      if (showHex){
       }
 
       if (showFiles){  
